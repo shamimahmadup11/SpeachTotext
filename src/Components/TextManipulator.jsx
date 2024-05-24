@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 const TextManipulator = () => {
   const [inputText, setInputText] = useState('');
@@ -33,7 +33,10 @@ const TextManipulator = () => {
 
   return (
     <div className="max-w-md mx-auto p-4">
-      <div className="flex mb-4">
+        <h1 className='text-2xl font-bold text-center'>TextUtis - Word Counter, Charecter Counter, Remove Extra Space
+</h1>
+      <div className="flex mb-4 gap-3">
+        
         <textarea
           className="w-2/3 h-40 border rounded-md resize-none p-2 mr-2"
           placeholder="Enter text..."
@@ -60,9 +63,9 @@ const TextManipulator = () => {
             Clear Text
           </button>
           <button
-            className={`bg-blue-500 hover:bg-blue-700 text-white px-4 py-2 rounded-md focus:outline-none ${!outputText && 'opacity-50 cursor-not-allowed'}`}
+            className={`bg-blue-500 hover:bg-blue-700 text-white px-4 py-2 rounded-md`}
             onClick={copyToClipboard}
-            disabled={!outputText}
+    
           >
             Copy to Clipboard
           </button>
@@ -78,7 +81,7 @@ const TextManipulator = () => {
         className="w-2/3 h-40 border rounded-md resize-none p-2"
         placeholder="Output text..."
         value={outputText}
-        readOnly
+       
       ></textarea>
     </div>
   );
